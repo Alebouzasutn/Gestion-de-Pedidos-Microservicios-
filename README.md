@@ -1,5 +1,28 @@
 # Gestion-de-Pedidos---Microservicios-Product Service
 Desarrollo en arquitectura Microservicios implementando Spring Security para Register y Login de usuarios, protocolos de generacion de Token y Autenticacion (Micro Auth Service) Cada microservicio con base de datos MySQL y tablas generadas automaticamente a partir de cada entidad. 
+productservice – gestión de productos
+
+**Función principal: CRUD de productos.**
+
+- Entradas: peticiones HTTP para crear, actualizar, eliminar o consultar productos.
+
+GET /api/products → lista todos los productos (público).
+
+GET /api/products/{id} → obtener un producto por ID (público).
+
+POST /api/products → crear producto (requiere JWT).
+
+PUT /api/products/{id} → actualizar producto (requiere JWT).
+
+DELETE /api/products/{id} → eliminar producto (requiere JWT).
+
+- Salidas: JSON con información del producto o estado de la operación.
+
+Cómo usa authservice:
+
+Protege endpoints con JWT emitido por authservice.
+
+No interactúa directamente con la BD de usuarios.
 
 **Patrones de diseño aplicados en microservicios con Spring Boot**
 
